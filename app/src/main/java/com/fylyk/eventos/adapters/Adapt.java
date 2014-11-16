@@ -1,6 +1,9 @@
 package com.fylyk.eventos.adapters;
 
 import android.app.Activity;
+import android.graphics.Canvas;
+import android.graphics.Path;
+import android.graphics.RectF;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +11,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.daimajia.androidviewhover.BlurLayout;
 import com.fylyk.eventos.Eventos;
 import com.fylyk.eventos.R;
 import com.fylyk.eventos.ViewHolder;
@@ -56,12 +60,14 @@ public class Adapt extends BaseAdapter {
 
         holder = (ViewHolder) view.getTag();
 
+
         holder.txtName.setText(eventos.get(position).getName());
         holder.txtOrganizer.setText(eventos.get(position).getOrganizer());
         holder.imageView.setImageResource(eventos.get(position).getImage_thumb());
 
         return view;
     }
+
 
     private ViewHolder getViewHolder(View convertView) {
 

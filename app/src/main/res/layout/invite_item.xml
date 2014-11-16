@@ -9,18 +9,27 @@
         android:layout_gravity="center_horizontal"
         android:background="@drawable/card">
 
-        <ImageView
-            android:layout_width="100dp"
+
+        <com.daimajia.androidviewhover.BlurLayout
+            android:id="@+id/blurImage"
             android:layout_height="fill_parent"
-            android:id="@+id/iEventImage"
-            android:layout_centerVertical="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:src="@drawable/aniversario"
-            android:layout_alignParentEnd="false"
-            android:adjustViewBounds="false"
-            android:cropToPadding="false"
-            android:scaleType="centerCrop" />
+            android:layout_width="wrap_content">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="fill_parent"
+                android:id="@+id/iEventImage"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/aniversario"
+                android:layout_alignParentEnd="false"
+                android:adjustViewBounds="false"
+                android:cropToPadding="false"
+                android:scaleType="centerCrop"
+                android:layout_margin="2px" />
+
+        </com.daimajia.androidviewhover.BlurLayout>
 
         <RelativeLayout
             android:layout_width="fill_parent"
@@ -28,8 +37,8 @@
             android:layout_alignParentTop="true"
             android:paddingLeft="10dp"
             android:gravity="center_vertical"
-            android:layout_toRightOf="@+id/iEventImage"
-            android:layout_toEndOf="@+id/iEventImage">
+            android:layout_toRightOf="@+id/blurImage"
+            android:layout_toEndOf="@+id/blurImage">
 
             <TextView
                 android:layout_width="wrap_content"

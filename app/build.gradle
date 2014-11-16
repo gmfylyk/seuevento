@@ -7,9 +7,11 @@ android {
     defaultConfig {
         applicationId "com.fylyk.eventos"
         minSdkVersion 15
-        targetSdkVersion 21
+        targetSdkVersion 20
         versionCode 1
         versionName "1.0"
+        renderscriptTargetApi 19
+        renderscriptSupportMode true
     }
     buildTypes {
         release {
@@ -21,4 +23,9 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile "com.android.support:support-v4:20.+"
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.daimajia.easing:library:1.0.0@aar'
+    compile 'com.daimajia.androidanimations:library:1.1.2@aar'
+    compile 'com.daimajia.androidviewhover:library:1.0.3@aar'
 }

@@ -1,6 +1,7 @@
 package com.fylyk.eventos.adapters;
 
 import android.app.Activity;
+import android.graphics.BlurMaskFilter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,8 @@ import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidviewhover.BlurLayout;
 import com.fylyk.eventos.Eventos;
 import com.fylyk.eventos.R;
 import com.fylyk.eventos.ViewHolder;
@@ -63,6 +66,15 @@ public class InvitesAdapter extends BaseAdapter{
         holder.txtPlace.setText(eventos.get(position).getPlace());
         holder.date.setText(formatDate(eventos.get(position).getDate()));
         holder.imageView.setImageResource(eventos.get(position).getImage_thumb());
+
+        BlurLayout blurLayout = (BlurLayout)view.findViewById(R.id.blurImage);
+        View hover = inflater.inflate(R.layout.blur_event_item,null);
+        blurLayout.setHoverView(hover);
+
+        blurLayout.addChildAppearAnimator(hover,R.id.accept, Techniques.FlipInX);
+        blurLayout.addChildAppearAnimator(hover,R.id.reject, Techniques.FlipInX);
+        blurLayout.addChildDisappearAnimator(hover,R.id.accept, Techniques.FlipOutX);
+        blurLayout.addChildDisappearAnimator(hover,R.id.reject, Techniques.FlipOutX);
 
         return view;
     }

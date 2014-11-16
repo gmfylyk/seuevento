@@ -60,20 +60,18 @@
         </RelativeLayout>
     </ScrollView>
 
-    <ImageButton
+    <Button
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:background="@drawable/flatcircle"
         android:onClick="newEvento"
-        android:text="+"
         android:textColor="@android:color/white"
-        android:textSize="40dp"
         android:layout_margin="10dp"
         android:id="@+id/button"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:src="@drawable/plus"
-        android:scaleType="centerCrop" />
+        android:src="@drawable/icon_newadd"
+        android:scaleType="centerCrop"
+        android:background="@drawable/circlebutton" />
 
 </RelativeLayout>
