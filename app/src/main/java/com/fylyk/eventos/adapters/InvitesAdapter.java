@@ -62,7 +62,7 @@ public class InvitesAdapter extends BaseAdapter{
         holder.txtName.setText(eventos.get(position).getName());
         holder.txtPlace.setText(eventos.get(position).getPlace());
         holder.date.setText(formatDate(eventos.get(position).getDate()));
-        holder.imageView.setImageResource(eventos.get(position).getImage_url());
+        holder.imageView.setImageResource(eventos.get(position).getImage_thumb());
 
         return view;
     }

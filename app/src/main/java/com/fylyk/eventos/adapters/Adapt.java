@@ -58,7 +58,7 @@ public class Adapt extends BaseAdapter {
 
         holder.txtName.setText(eventos.get(position).getName());
         holder.txtOrganizer.setText(eventos.get(position).getOrganizer());
-        holder.imageView.setImageResource(eventos.get(position).getImage_url());
+        holder.imageView.setImageResource(eventos.get(position).getImage_thumb());
 
         return view;
     }

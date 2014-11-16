@@ -17,7 +17,7 @@ public class Samples {
         for (int i = 0 ; i < 6 ; i++) {
             DatePicker dp = new DatePicker(ctx);
             dp.init(2014,04,days[i],null);
-            Eventos e = new Eventos(images[i],dp,place[i],organizador[i],nome[i]);
+            Eventos e = new Eventos(images[i],dp,place[i],organizador[i],nome[i],thumbs[i]);
             samples.add(e);
         }
 
@@ -31,6 +31,15 @@ public class Samples {
             R.drawable.aniversario,
             R.drawable.frag,
             R.drawable.filmes
+    };
+
+    private static int[] thumbs = new int[]{
+            R.drawable.despedida_thumb,
+            R.drawable.sushi_thumb,
+            R.drawable.pizza_thumb,
+            R.drawable.aniversario_thumb,
+            R.drawable.frag_thumb,
+            R.drawable.filmes_thumb
     };
 
     private static String[] nome = {

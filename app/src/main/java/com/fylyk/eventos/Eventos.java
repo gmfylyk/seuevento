@@ -18,12 +18,15 @@ public class Eventos {
     private String place;
     private DatePicker date;
 
-    public Eventos(int image_url, DatePicker date, String place, String organizer, String name) {
+    private int image_thumb;
+
+    public Eventos(int image_url, DatePicker date, String place, String organizer, String name, int image_thumb) {
         this.image_url = image_url;
         this.date = date;
         this.place = place;
         this.organizer = organizer;
         this.name = name;
+        this.image_thumb = image_thumb;
     }
 
     public String getPlace() {
@@ -32,6 +35,14 @@ public class Eventos {
 
     public void setPlace(String place) {
         this.place = place;
+    }
+
+    public int getImage_thumb() {
+        return image_thumb;
+    }
+
+    public void setImage_thumb(int image_thumb) {
+        this.image_thumb = image_thumb;
     }
 
     public DatePicker getDate() {
@@ -61,6 +72,7 @@ public class Eventos {
     public int getImage_url() {
         return image_url;
     }
+
 
     public void setImage_url(int image_url) {
         this.image_url = image_url;

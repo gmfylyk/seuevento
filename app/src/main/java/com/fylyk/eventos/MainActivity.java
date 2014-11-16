@@ -25,7 +25,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         GridView gridView = (GridView)findViewById(R.id.gridView);
-        gridView.setAdapter(new Adapt(Samples.getSampleEvents(this),this));
+        gridView.setAdapter(new Adapt(Samples.getSampleEvents(this).subList(0,3),this));
         viewsAdapters.setGridViewHeightBasedOnChildren(gridView, 3);
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -39,8 +39,17 @@ public class MainActivity extends Activity {
 
 
         ListView listView = (ListView)findViewById(R.id.inviteList);
-        listView.setAdapter(new InvitesAdapter(Samples.getSampleEvents(this),this));
+        listView.setAdapter(new InvitesAdapter(Samples.getSampleEvents(this).subList(3,6),this));
         viewsAdapters.setListViewHeightBasedOnChildren(listView);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView adapterView, View view, int i, long l) {
+                Eventos clickedEvent = (Eventos) adapterView.getAdapter().getItem(i);
+                Intent inte = new Intent(ctx, Evento.class);
+                inte.putExtras(clickedEvent.createBundle());
+                startActivity(inte);
+            }
+        });
     }
 
     @Override
