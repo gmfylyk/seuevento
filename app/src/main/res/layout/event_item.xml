@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="100dp"
+    android:layout_height="100dp" >
+
+
+    <RelativeLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/eventImage"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/pizza"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Pizza"
+            android:id="@+id/eventName"
+            android:background="#b9ffffff"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:maxLines="1"
+            android:minHeight="20dp"
+            android:minLines="1"
+            android:textStyle="bold"
+            android:maxHeight="200dp"
+            android:paddingTop="5dp"
+            android:textColor="#ff525252"
+            android:textSize="20dp"
+            android:layout_above="@+id/organizer"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Organizador"
+            android:id="@+id/organizer"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="#b9ffffff"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:maxLines="1"
+            android:minHeight="20dp"
+            android:minLines="1"
+            android:maxHeight="200dp"
+            android:paddingBottom="10dp"
+            android:textColor="#ff525252"
+            android:textSize="15dp" />
+    </RelativeLayout>
+</LinearLayout>
